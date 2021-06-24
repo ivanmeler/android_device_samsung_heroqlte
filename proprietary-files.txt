@@ -1,0 +1,45 @@
+# ACDB data
+vendor/etc/General_cal.acdb
+vendor/etc/Hdmi_cal.acdb
+vendor/etc/Headset_cal.acdb
+vendor/etc/Bluetooth_cal.acdb
+vendor/etc/Speaker_cal.acdb
+vendor/etc/Handset_cal.acdb
+vendor/etc/Global_cal.acdb
+vendor/etc/workspaceFile.qwsp
+
+# RIL
+etc/mtu-conf.xml
+lib64/vendor.samsung.hardware.radio.secbridge@1.0.so
+lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
+vendor/bin/hw/rild
+vendor/bin/hw/vendor.samsung.hardware.radio.configsvc@1.0-service
+vendor/bin/adpl
+vendor/bin/ATFWD-daemon
+vendor/bin/netmgrd
+vendor/etc/data/netmgr_config.xml
+vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
+vendor/etc/plmn_se13.bin
+vendor/etc/sec_config_oem
+-vendor/lib/libril.so
+vendor/lib64/libconfigdb.so
+vendor/lib64/liblqe.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
+vendor/lib64/libnlnetmgr.so
+vendor/lib64/libpdnotifier.so
+vendor/lib64/libqrtr.so
+-vendor/lib64/libril.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsystem_health_mon.so
+vendor/lib64/libvndsecril-client.so
+vendor/lib64/libxml.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@1.0_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.configsvc@1.0_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio@1.2_vendor.so
+
+# Sensors
+vendor/lib/sensors.grip.so
+vendor/lib64/sensors.grip.so

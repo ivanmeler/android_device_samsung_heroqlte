@@ -1,0 +1,82 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+on boot
+# permission for MUIC(waterproof)
+    chown system radio /sys/class/sec/switch/uart_en
+	
+# permission for touchkey grip
+    chown system radio /sys/class/sec/sec_touchkey/sar_enable
+    chown system radio /sys/class/sec/sec_touchkey/sw_reset
+
+# op mode for charger
+	chmod 0664 /sys/class/power_supply/sm5705-charger/charger_op_mode
+	chown system radio /sys/class/power_supply/sm5705-charger/charger_op_mode
+
+# Permissions for Charging
+    chown sdcard_rw sdcard_rw /sys/class/power_supply/battery/store_mode
+
+# bluetooth
+    chown bluetooth bluetooth /dev/ttyHS0
+    chmod 0660 /dev/ttyHS0
+	
+# Permissions for System LSI NFC
+# NFC : Permissions for NFC
+    chmod 0660 /dev/sec-nfc
+# NFC : change owner
+    chown nfc nfc /dev/sec-nfc
+
+# Permissions for S.LSI ESE
+	chmod 0660 /dev/p3
+	chown system system /dev/p3
+
+# Permissions for NXP NFC
+# NFC : Permissions for NFC
+    chmod 0660 /dev/pn547
+# NFC : change owner
+    chown nfc nfc /dev/pn547
+
+# Permissions for NXP ESE
+    chmod 0660 /dev/p61
+    chown system system /dev/p61
+
+# Fingerprint
+    mkdir /dev/validity 0770 system system
+
+# Fingerprint_sensor
+    chmod 0660 /dev/vfsspi
+    chmod 0660 /dev/esfp0
+    chown system system /dev/vfsspi
+    chown system system /dev/esfp0
+    chown system radio /sys/class/fingerprint/fingerprint/type_check
+    chown system radio /sys/class/fingerprint/fingerprint/name
+    chown system radio /sys/class/fingerprint/fingerprint/vendor
+    chown system radio /sys/class/fingerprint/fingerprint/adm
+
+on post-fs-data
+# permissions for audio
+    chown system radio /sys/class/rt5508_cal/trigger
+    chown system radio /sys/class/rt5508_cal/status
+    chown system radio /sys/class/rt5508_cal/rt5508.0/gsense_otp
+    chown system radio /sys/class/rt5508_cal/rt5508.0/n20db
+    chown system radio /sys/class/rt5508_cal/rt5508.0/n15db
+    chown system radio /sys/class/rt5508_cal/rt5508.0/n10db
+    chown system radio /sys/class/rt5508_cal/rt5508.0/rspk
+    chown system radio /sys/class/rt5508_cal/rt5508.0/dcr_offset
+
+    mkdir /efs/richtek/rt5508_cal 0771 radio system
+
+# permissions for bluetooth.
+    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+    chown radio bluetooth /efs/bluetooth/bt_addr
+    chmod 0640 /efs/bluetooth/bt_addr
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
+
