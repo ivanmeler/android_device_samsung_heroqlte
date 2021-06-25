@@ -9,4 +9,3 @@ persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.rat_on=combine
 rild.libargs=-d /dev/umts_ipc0
 telephony.lteOnCdmaDevice=0
-vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
