@@ -25,7 +25,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     init.gts3llte.rc \
     init.rilchip.rc \
-    init.rilcommon.rc
+    init.rilcommon.rc \
+    init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc
 
 # IPA
 PRODUCT_PACKAGES += \
