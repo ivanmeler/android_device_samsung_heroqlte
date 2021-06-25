@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.carrier.rc \
+    init.gts3llte.rc \
     init.rilchip.rc \
     init.rilcommon.rc
 
