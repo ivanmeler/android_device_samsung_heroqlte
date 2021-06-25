@@ -44,6 +44,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
     android.hardware.radio.config@1.1 \
+    android.hardware.radio.deprecated@1.0 \
     android.hardware.secure_element@1.0 \
     librmnetctl \
     libxml2 \
