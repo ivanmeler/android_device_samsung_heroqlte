@@ -9,6 +9,7 @@ vendor/etc/Global_cal.acdb
 vendor/etc/workspaceFile.qwsp
 
 # RIL
+etc/control_netmgrd.sh
 etc/mtu-conf.xml
 lib64/vendor.samsung.hardware.radio.secbridge@1.0.so
 lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
