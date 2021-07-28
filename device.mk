@@ -50,10 +50,5 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
-
 # Inherit from gts3l-common
 $(call inherit-product, device/samsung/gts3l-common/gts3l.mk)
