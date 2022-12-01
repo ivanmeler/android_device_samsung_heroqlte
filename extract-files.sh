@@ -23,8 +23,8 @@ fi
 
 set -e
 
-export DEVICE=gts3llte
-export DEVICE_COMMON=gts3l-common
+export DEVICE=heroqlte
+export DEVICE_COMMON=msm8996-common
 export VENDOR=samsung
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"

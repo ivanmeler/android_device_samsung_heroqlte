@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_device_samsung_gts3l-common",
-    "target_path": "device/samsung/gts3l-common"
+    "repository": "android_device_samsung_msm8996-common",
+    "target_path": "device/samsung/msm8996-common"
   }
 ]

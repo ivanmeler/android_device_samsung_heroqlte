@@ -14,20 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common gts3l-common
--include device/samsung/gts3l-common/BoardConfigCommon.mk
+# inherit from common msm8996-common
+-include device/samsung/msm8996-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/gts3llte
+DEVICE_PATH := device/samsung/heroqlte
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := gts3llte
+TARGET_OTA_ASSERT_DEVICE := heroqlte
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := gts3llte_defconfig
+TARGET_KERNEL_CONFIG := heroqlte_chn_open_defconfig
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
@@ -37,4 +37,4 @@ BOARD_PROVIDES_LIBRIL := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # inherit from the proprietary version
-include vendor/samsung/gts3llte/BoardConfigVendor.mk
+include vendor/samsung/heroqlte/BoardConfigVendor.mk

@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/gts3llte/gts3llte-vendor.mk)
+$(call inherit-product, vendor/samsung/heroqlte/heroqlte-vendor.mk)
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.gts3llte.rc \
+    init.heroqlte.rc \
     init.rilchip.rc \
     init.rilcommon.rc \
     init.vendor.rilchip.rc \
@@ -50,5 +50,5 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-# Inherit from gts3l-common
-$(call inherit-product, device/samsung/gts3l-common/gts3l.mk)
+# Inherit from msm8996-common
+$(call inherit-product, device/samsung/msm8996-common/msm8996.mk)

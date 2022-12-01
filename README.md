@@ -1,4 +1,4 @@
-# Device Tree for Samsung Galaxy Tab S3 LTE (gts3llte)
+# Device Tree for Samsung Galaxy S7 QCOM (heroqlte)
 
 ## Disclaimer
 
@@ -21,21 +21,21 @@
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project name="awesometic/android_device_samsung_gts3l-common"
-        path="device/samsung/gts3l-common"
+    <project name="ivanmeler/android_device_samsung_msm8996-common"
+        path="device/samsung/msm8996-common"
         revision="lineage-18.1"
         remote="github" />
-    <project name="awesometic/android_device_samsung_gts3llte"
-        path="device/samsung/gts3llte"
+    <project name="ivanmeler/android_device_samsung_heroqlte"
+        path="device/samsung/heroqlte"
         revision="lineage-18.1"
         remote="github" />
-    <project name="awesometic/proprietary_vendor_samsung"
+    <project name="ivanmeler/proprietary_vendor_samsung_msm8996"
         path="vendor/samsung"
         revision="lineage-18.1"
         remote="github" />
-    <project name="awesometic/android_kernel_samsung_msm8996"
+    <project name="ivanmeler/android_kernel_samsung_msm8996"
         path="kernel/samsung/msm8996"
-        revision="lineage-18.1-caf"
+        revision="caf"
         remote="github" />
 
     <project name="LineageOS/android_device_samsung_qcom-common"
