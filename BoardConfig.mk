@@ -20,7 +20,7 @@
 DEVICE_PATH := device/samsung/heroqlte
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := heroqlte
+TARGET_OTA_ASSERT_DEVICE := heroqlte,heroqltechn
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
