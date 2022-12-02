@@ -35,7 +35,7 @@
         remote="github" />
     <project name="ivanmeler/android_kernel_samsung_msm8996"
         path="kernel/samsung/msm8996"
-        revision="caf"
+        revision="lineage-18.1-caf"
         remote="github" />
 
     <project name="LineageOS/android_device_samsung_qcom-common"
