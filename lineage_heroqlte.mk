@@ -34,9 +34,10 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 # Use the latest approved GMS identifiers
-#PRODUCT_BUILD_PROP_OVERRIDES += \
-#    PRODUCT_NAME=heroqlte \
-#    PRIVATE_BUILD_DESC="heroqltekx-user 9 PPR1.180610.011 T825N0KOU3CTD1 release-keys"
+# do note actial value is heroqltechn for device and heroqltezc for name
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=heroqlte \
+    PRIVATE_BUILD_DESC="heroqltezc-user 8.0.0 R16NW G9300ZCS5CTA1 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-#BUILD_FINGERPRINT := "samsung/heroqltekx/heroqltekx:9/PPR1.180610.011/T825N0KOU3CTD1:user/release-keys"
+BUILD_FINGERPRINT := "samsung/heroqltezc/heroqltechn:8.0.0/R16NW/G9300ZCS5CTA1:user/release-keys"
