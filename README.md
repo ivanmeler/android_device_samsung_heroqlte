@@ -54,3 +54,16 @@
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 
 You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE-2.0.html]
+
+
+## TODO
+- camera, for some reason null name chromatrix is loaded
+- bluetooth
+- imporove audio
+- use more s7 blobs
+- keystore (works on tab)
+- check init
+- notif led
+- nfc
+- remove debugging from kernel
+- update to newer android version
