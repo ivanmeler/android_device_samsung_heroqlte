@@ -57,9 +57,10 @@ You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE
 
 
 ## TODO
+- check init for missing perms and stuff which might help fix remaining issues
+- consider libbt-vendor from stock/ or check fw/config for stability
 - camera, something something vsync
 - tethering/dual role doesnt forward internet
-- bluetooth (likely wrong port (ttyHS0))
 - imporove audio
 - use more s7 blobs
 - check init
