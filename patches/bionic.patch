@@ -1,0 +1,16 @@
+diff --git a/libc/bionic/pthread_mutex.cpp b/libc/bionic/pthread_mutex.cpp
+index ead3e63..38ab568 100644
+--- a/libc/bionic/pthread_mutex.cpp
++++ b/libc/bionic/pthread_mutex.cpp
+@@ -1016,9 +1016,9 @@ int pthread_mutex_clocklock(pthread_mutex_t* mutex_interface, clockid_t clock,
+ int pthread_mutex_destroy(pthread_mutex_t* mutex_interface) {
+     pthread_mutex_internal_t* mutex = __get_internal_mutex(mutex_interface);
+     uint16_t old_state = atomic_load_explicit(&mutex->state, memory_order_relaxed);
+-    if (__predict_false(IsMutexDestroyed(old_state))) {
++    /*if (__predict_false(IsMutexDestroyed(old_state))) {
+         return HandleUsingDestroyedMutex(mutex_interface, __FUNCTION__);
+-    }
++    }*/
+     if (old_state == PI_MUTEX_STATE) {
+         int result = PIMutexDestroy(mutex->ToPIMutex());
+         if (result == 0) {
