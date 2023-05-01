@@ -66,4 +66,5 @@ You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE
 - notif led (might need init.rc changes)
 - nfc
 - perf tuning
+- Dual sim, which needs s7 ril blobs
 - update to newer android version
