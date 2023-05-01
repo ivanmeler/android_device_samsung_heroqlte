@@ -57,13 +57,13 @@ You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE
 
 
 ## TODO
-- camera, for some reason null name chromatrix is loaded
-- bluetooth
+- camera, something something vsync
+- tethering/dual role doesnt forward internet
+- bluetooth (likely wrong port (ttyHS0))
 - imporove audio
 - use more s7 blobs
-- keystore (works on tab)
 - check init
-- notif led
+- notif led (might need init.rc changes)
 - nfc
-- remove debugging from kernel
+- perf tuning
 - update to newer android version
