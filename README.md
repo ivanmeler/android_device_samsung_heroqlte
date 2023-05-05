@@ -23,28 +23,33 @@
 <manifest>
     <project name="ivanmeler/android_device_samsung_msm8996-common"
         path="device/samsung/msm8996-common"
-        revision="lineage-18.1"
+        revision="lineage-19.1"
         remote="github" />
     <project name="ivanmeler/android_device_samsung_heroqlte"
         path="device/samsung/heroqlte"
-        revision="lineage-18.1"
+        revision="lineage-19.1"
         remote="github" />
     <project name="ivanmeler/proprietary_vendor_samsung_msm8996"
         path="vendor/samsung"
-        revision="lineage-18.1"
+        revision="lineage-19.1"
         remote="github" />
     <project name="ivanmeler/android_kernel_samsung_msm8996"
         path="kernel/samsung/msm8996"
-        revision="lineage-18.1-caf"
+        revision="lineage-19.1-caf"
         remote="github" />
 
-    <project name="LineageOS/android_device_samsung_qcom-common"
+    <!-- TODO: use appended dtb instead -->
+    <project name="LineageOS/android_system_tools_dtbtool"
         path="device/samsung/qcom-common"
         revision="lineage-18.1"
         remote="github" />
+    <project name="LineageOS/android_device_samsung_qcom-common"
+        path="device/samsung/qcom-common"
+        revision="lineage-19.1"
+        remote="github" />
     <project name="LineageOS/android_hardware_samsung"
         path="hardware/samsung"
-        revision="lineage-18.1"
+        revision="lineage-19.1"
         remote="github" />
 </manifest>
 ```

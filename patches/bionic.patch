@@ -1,8 +1,68 @@
+From f83f0ebb7708de5770c672873ae7dea5d87c263f Mon Sep 17 00:00:00 2001
+From: ivanmeler <i_ivan@windowslive.com>
+Date: Fri, 5 May 2023 13:09:28 +0000
+Subject: [PATCH] bionic haxx
+
+Change-Id: Idea2dd24f80940121703421697f43c04626a945c
+---
+ libc/bionic/pthread_mutex.cpp | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
 diff --git a/libc/bionic/pthread_mutex.cpp b/libc/bionic/pthread_mutex.cpp
-index ead3e63..38ab568 100644
+index a15e981..94fe18b 100644
 --- a/libc/bionic/pthread_mutex.cpp
 +++ b/libc/bionic/pthread_mutex.cpp
-@@ -1016,9 +1016,9 @@ int pthread_mutex_clocklock(pthread_mutex_t* mutex_interface, clockid_t clock,
+@@ -833,9 +833,9 @@ int pthread_mutex_lock(pthread_mutex_t* mutex_interface) {
+         }
+         return PIMutexTimedLock(mutex->ToPIMutex(), false, nullptr);
+     }
+-    if (__predict_false(IsMutexDestroyed(old_state))) {
++    /*if (__predict_false(IsMutexDestroyed(old_state))) {
+         return HandleUsingDestroyedMutex(mutex_interface, __FUNCTION__);
+-    }
++    }*/
+     return NonPI::MutexLockWithTimeout(mutex, false, nullptr);
+ }
+ 
+@@ -862,9 +862,9 @@ int pthread_mutex_unlock(pthread_mutex_t* mutex_interface) {
+     if (old_state == PI_MUTEX_STATE) {
+         return PIMutexUnlock(mutex->ToPIMutex());
+     }
+-    if (__predict_false(IsMutexDestroyed(old_state))) {
++    /*if (__predict_false(IsMutexDestroyed(old_state))) {
+         return HandleUsingDestroyedMutex(mutex_interface, __FUNCTION__);
+-    }
++    }*/
+ 
+     // Do we already own this recursive or error-check mutex?
+     pid_t tid = __get_thread()->tid;
+@@ -911,9 +911,9 @@ int pthread_mutex_trylock(pthread_mutex_t* mutex_interface) {
+     if (old_state == PI_MUTEX_STATE) {
+         return PIMutexTryLock(mutex->ToPIMutex());
+     }
+-    if (__predict_false(IsMutexDestroyed(old_state))) {
++    /*if (__predict_false(IsMutexDestroyed(old_state))) {
+         return HandleUsingDestroyedMutex(mutex_interface, __FUNCTION__);
+-    }
++    }*/
+ 
+     // Do we already own this recursive or error-check mutex?
+     pid_t tid = __get_thread()->tid;
+@@ -997,11 +997,11 @@ int pthread_mutex_clocklock(pthread_mutex_t* mutex_interface, clockid_t clock,
+     case CLOCK_REALTIME:
+       return __pthread_mutex_timedlock(mutex_interface, true, abs_timeout, __FUNCTION__);
+     default: {
+-      pthread_mutex_internal_t* mutex = __get_internal_mutex(mutex_interface);
++      /*pthread_mutex_internal_t* mutex = __get_internal_mutex(mutex_interface);
+       uint16_t old_state = atomic_load_explicit(&mutex->state, memory_order_relaxed);
+       if (IsMutexDestroyed(old_state)) {
+         return HandleUsingDestroyedMutex(mutex_interface, __FUNCTION__);
+-      }
++      }*/
+       return EINVAL;
+     }
+   }
+@@ -1010,9 +1010,9 @@ int pthread_mutex_clocklock(pthread_mutex_t* mutex_interface, clockid_t clock,
  int pthread_mutex_destroy(pthread_mutex_t* mutex_interface) {
      pthread_mutex_internal_t* mutex = __get_internal_mutex(mutex_interface);
      uint16_t old_state = atomic_load_explicit(&mutex->state, memory_order_relaxed);
@@ -14,3 +74,6 @@ index ead3e63..38ab568 100644
      if (old_state == PI_MUTEX_STATE) {
          int result = PIMutexDestroy(mutex->ToPIMutex());
          if (result == 0) {
+-- 
+2.34.1
+
