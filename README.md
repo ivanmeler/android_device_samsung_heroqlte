@@ -62,8 +62,6 @@ You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE
 
 
 ## TODO
-- fp delete 
-- volume control for notif., mixers or something related
 - check init for missing perms and stuff which might help fix remaining issues
 - consider libbt-vendor from stock/or check fw/config for stability
 - camera lib should be edited for pthread, for now use bionic patch, also look into shim we use
@@ -75,4 +73,3 @@ You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE
 - nfc
 - perf tuning
 - Dual sim, which needs s7 ril blobs
-- update to newer android version
