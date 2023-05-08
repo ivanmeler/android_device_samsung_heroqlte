@@ -40,7 +40,7 @@
 
     <!-- TODO: use appended dtb instead -->
     <project name="LineageOS/android_system_tools_dtbtool"
-        path="device/samsung/qcom-common"
+        path="system/tools/dtbtool"
         revision="lineage-18.1"
         remote="github" />
     <project name="LineageOS/android_device_samsung_qcom-common"
